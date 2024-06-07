@@ -10,6 +10,12 @@ export interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   { path: "/dashboard", title: "Dashboard", icon: "nc-bank", class: "" },
   {
+    path: "/table",
+    title: "Forum",
+    icon: "nc-tile-56",
+    class: "",
+  },
+  {
     path: "/icons",
     title: "Traning and Drills ",
     icon: "nc-diamond",
@@ -22,12 +28,7 @@ export const ROUTES: RouteInfo[] = [
     icon: "nc-bell-55",
     class: "",
   },
-  {
-    path: "/table",
-    title: "Forum",
-    icon: "nc-tile-56",
-    class: "",
-  },
+
   { path: "/user", title: "Incident Report", icon: "nc-single-02", class: "" },
 
   {
@@ -39,13 +40,13 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/surviellance",
     title: "Surviellance Viewing",
-    icon: "nc-door-open",
+    icon: "nc-pin-3",
     class: "",
   },
   {
     path: "/upgrade",
     title: "Logout",
-    icon: "nc-door-close",
+    icon: "nc-single-02",
     class: "active-pro",
   },
 ];
