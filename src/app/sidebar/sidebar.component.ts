@@ -9,8 +9,13 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
   { path: "/dashboard", title: "Dashboard", icon: "nc-bank", class: "" },
-  { path: "/icons", title: "Evacuation Routes", icon: "nc-diamond", class: "" },
-  { path: "/maps", title: "Shelter Locations", icon: "nc-pin-3", class: "" },
+  {
+    path: "/icons",
+    title: "Traning and Drills ",
+    icon: "nc-diamond",
+    class: "",
+  },
+  { path: "/maps", title: "Police Locations", icon: "nc-pin-3", class: "" },
   {
     path: "/notifications",
     title: "Emergency Contacts",
@@ -19,24 +24,30 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: "/table",
-    title: "Resource Directory",
+    title: "Forum",
     icon: "nc-tile-56",
     class: "",
   },
-  { path: "/user", title: "User Profile", icon: "nc-single-02", class: "" },
+  { path: "/user", title: "Incident Report", icon: "nc-single-02", class: "" },
 
-  //   {
-  //     path: "/typography",
-  //     title: "Typography",
-  //     icon: "nc-caps-small",
-  //     class: "",
-  //   },
-  //   {
-  //     path: "/upgrade",
-  //     title: "Upgrade to PRO",
-  //     icon: "nc-spaceship",
-  //     class: "active-pro",
-  //   },
+  {
+    path: "/typography",
+    title: "Convicts",
+    icon: "nc-caps-small",
+    class: "",
+  },
+  {
+    path: "/surviellance",
+    title: "Surviellance Viewing",
+    icon: "nc-door-open",
+    class: "",
+  },
+  {
+    path: "/upgrade",
+    title: "Logout",
+    icon: "nc-door-close",
+    class: "active-pro",
+  },
 ];
 
 @Component({

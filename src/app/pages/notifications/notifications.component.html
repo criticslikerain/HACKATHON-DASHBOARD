@@ -1,144 +1,99 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid #ccc;
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
 <div class="row">
   <div class="col-md-12">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex align-items-center justify-content-between">
-          <img
-            src="https://img.freepik.com/premium-vector/medical-sign-star-life-icon-hospital-ambulance-star-glyph-style-pictogram_599062-3817.jpg"
-            alt=""
-            class="h-25 w-25"
-          />
-          <div class="">
-            <h3>Hospitals</h3>
-            <p>234-12451</p>
-          </div>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1hMrTFVFopzqX1W0gx3HReITBtdm0H_-8&ehbc=2E312F"
-              width="540"
-              height="480"
-            ></iframe>
-          </div>
-        </div>
-        <div>
-          <div class="d-flex align-items-center justify-content-between">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjiD4wgBqhwm3GnvnHVvF5cRU35taPrqS6Q&s"
-              alt=""
-              class="h-25 w-25"
-            />
-            <div class="">
-              <h3>Police</h3>
-              <p>255-9992</p>
-            </div>
-            <div>
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1yJVcQxtXWzNTuT3jawkGj3uColPglppX&ehbc=2E312F"
-                width="540"
-                height="480"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="d-flex align-items-center justify-content-between">
-            <img
-              src="
-              https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0yAHLM0Si5UvtWxg5jiSlnzdYSkJOkqlJ2w&s"
-              alt=""
-              class="h-25 w-25"
-            />
-            <div class="">
-              <h3>Barangay Halls</h3>
-              <p>288-5222</p>
-            </div>
-            <div>
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1h8jNwasmGVqDFG85md6_CEmYXroG9bvm&ehbc=2E312F"
-                width="540"
-                height="480"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="places-buttons">
-          <div class="row">
-            <div class="col-md-6 ml-auto mr-auto text-center">
-              <h4 class="card-title">
-                Notifications Places
-                <p class="category">Click to view notifications</p>
-              </h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 ml-auto mr-auto">
-              <div class="row">
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('top', 'left')"
-                  >
-                    Top Left
-                  </button>
-                </div>
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('top', 'center')"
-                  >
-                    Top Center
-                  </button>
-                </div>
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('top', 'right')"
-                  >
-                    Top Right
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 ml-auto mr-auto">
-              <div class="row">
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('bottom', 'left')"
-                  >
-                    Bottom Left
-                  </button>
-                </div>
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('bottom', 'center')"
-                  >
-                    Bottom Center
-                  </button>
-                </div>
-                <div class="col-md-4">
-                  <button
-                    class="btn btn-primary btn-block"
-                    (click)="showNotification('bottom', 'right')"
-                  >
-                    Bottom Right
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1>Emergency Contacts</h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Organization</th>
+              <th>Contact Person</th>
+              <th>Role</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample Data Rows for Hospitals -->
+            <tr>
+              <td>City Hospital</td>
+              <td>Dr. Emily Watson</td>
+              <td>Chief Medical Officer</td>
+              <td>(123) 456-7890</td>
+              <td>emilywatson@cityhospital.com</td>
+            </tr>
+            <tr>
+              <td>County General Hospital</td>
+              <td>Dr. Michael Brown</td>
+              <td>Emergency Room Director</td>
+              <td>(234) 567-8901</td>
+              <td>michaelbrown@countygeneral.com</td>
+            </tr>
+
+            <!-- Sample Data Rows for Police Departments -->
+            <tr>
+              <td>Central Police Department</td>
+              <td>Chief Laura Martinez</td>
+              <td>Police Chief</td>
+              <td>(345) 678-9012</td>
+              <td>lauramartinez@centralpd.com</td>
+            </tr>
+            <tr>
+              <td>Eastside Police Department</td>
+              <td>Captain Robert Johnson</td>
+              <td>Captain</td>
+              <td>(456) 789-0123</td>
+              <td>robertjohnson@eastsidepd.com</td>
+            </tr>
+
+            <!-- Sample Data Rows for Fire Departments -->
+            <tr>
+              <td>Downtown Fire Department</td>
+              <td>Chief Susan Lee</td>
+              <td>Fire Chief</td>
+              <td>(567) 890-1234</td>
+              <td>susanlee@downtownfd.com</td>
+            </tr>
+            <tr>
+              <td>Westside Fire Department</td>
+              <td>Captain James White</td>
+              <td>Fire Captain</td>
+              <td>(678) 901-2345</td>
+              <td>jameswhite@westsidefd.com</td>
+            </tr>
+            <!-- Additional data rows go here -->
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

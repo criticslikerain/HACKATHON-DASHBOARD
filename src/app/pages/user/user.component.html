@@ -1,202 +1,147 @@
-<div class="row">
-  <div class="col-md-4">
-    <div class="card card-user">
-      <div class="image">
-        <img src="assets/img/damir-bosnjak.jpg" alt="...">
-      </div>
-      <div class="card-body">
-        <div class="author">
-          <a href="#">
-            <img class="avatar border-gray" src="assets/img/mike.jpg" alt="...">
-            <h5 class="title">Chet Faker</h5>
-          </a>
-          <p class="description">
-            @chetfaker
-          </p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Reports</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .form-container h2 {
+        text-align: center;
+        color: #333;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+      }
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .form-group button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Incident Reports</h1>
+
+    <table class="bg-black">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample Data Rows -->
+        <tr>
+          <td>1</td>
+          <td>Theft</td>
+          <td>Stolen bicycle</td>
+          <td>Central Park</td>
+          <td>2024-06-07</td>
+          <td>Resolved</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Assault</td>
+          <td>Physical altercation</td>
+          <td>Main Street</td>
+          <td>2024-06-06</td>
+          <td>In Progress</td>
+        </tr>
+        <!-- Additional data rows go here -->
+      </tbody>
+    </table>
+
+    <div class="form-container">
+      <h2>Report a New Incident</h2>
+      <form action="/submit-incident" method="POST">
+        <div class="form-group">
+          <label for="type">Incident Type:</label>
+          <select id="type" name="type" required>
+            <option value="Theft">Theft</option>
+            <option value="Assault">Assault</option>
+            <option value="Vandalism">Vandalism</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
-        <p class="description text-center">
-          "I like the way you work it
-          <br> No diggity
-          <br> I wanna bag it up"
-        </p>
-      </div>
-      <div class="card-footer">
-        <hr>
-        <div class="button-container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-6 ml-auto">
-              <h5>12
-                <br>
-                <small>Files</small>
-              </h5>
-            </div>
-            <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
-              <h5>2GB
-                <br>
-                <small>Used</small>
-              </h5>
-            </div>
-            <div class="col-lg-3 mr-auto">
-              <h5>24,6$
-                <br>
-                <small>Spent</small>
-              </h5>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+          ></textarea>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <button type="submit">Submit Incident</button>
+        </div>
+      </form>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <h4 class="card-title">Team Members</h4>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled team-members">
-          <li>
-            <div class="row">
-              <div class="col-md-2 col-2">
-                <div class="avatar">
-                  <img src="assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                </div>
-              </div>
-              <div class="col-md-7 col-7">
-                DJ Khaled
-                <br />
-                <span class="text-muted">
-                  <small>Offline</small>
-                </span>
-              </div>
-              <div class="col-md-3 col-3 text-right">
-                <button class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-md-2 col-2">
-                <div class="avatar">
-                  <img src="assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                </div>
-              </div>
-              <div class="col-md-7 col-7">
-                Creative Tim
-                <br />
-                <span class="text-success">
-                  <small>Available</small>
-                </span>
-              </div>
-              <div class="col-md-3 col-3 text-right">
-                <button class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-md-2 col-2">
-                <div class="avatar">
-                  <img src="assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                </div>
-              </div>
-              <div class="col-ms-7 col-7">
-                Flume
-                <br />
-                <span class="text-danger">
-                  <small>Busy</small>
-                </span>
-              </div>
-              <div class="col-md-3 col-3 text-right">
-                <button class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></button>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <div class="card card-user">
-      <div class="card-header">
-        <h5 class="card-title">Edit Profile</h5>
-      </div>
-      <div class="card-body">
-        <form>
-          <div class="row">
-            <div class="col-md-5 pr-1">
-              <div class="form-group">
-                <label>Company (disabled)</label>
-                <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-              </div>
-            </div>
-            <div class="col-md-3 px-1">
-              <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" placeholder="Username" value="michael23">
-              </div>
-            </div>
-            <div class="col-md-4 pl-1">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 pr-1">
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" placeholder="Company" value="Chet">
-              </div>
-            </div>
-            <div class="col-md-6 pl-1">
-              <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>Address</label>
-                <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 pr-1">
-              <div class="form-group">
-                <label>City</label>
-                <input type="text" class="form-control" placeholder="City" value="Melbourne">
-              </div>
-            </div>
-            <div class="col-md-4 px-1">
-              <div class="form-group">
-                <label>Country</label>
-                <input type="text" class="form-control" placeholder="Country" value="Australia">
-              </div>
-            </div>
-            <div class="col-md-4 pl-1">
-              <div class="form-group">
-                <label>Postal Code</label>
-                <input type="number" class="form-control" placeholder="ZIP Code">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>About Me</label>
-                <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="update ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+  </body>
+</html>
